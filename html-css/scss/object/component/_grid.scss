@@ -1,0 +1,12 @@
+.c-grid {
+	padding        : 0 17.5px;
+	display        : flex;
+	justify-content: center;
+	@include breakpoint( tablet ) {
+		padding: 0 20px;
+	}
+	@include breakpoint( pc ) {
+	}
+	@include breakpoint( wide ) {
+	}
+}

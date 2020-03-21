@@ -1,0 +1,89 @@
+.l-footer {
+	margin-top: 40px;
+	padding   : 20px 20px 15px;
+	background: $color--blue;
+	color     : #fff;
+	text-align: center;
+	font-size : 1.0rem;
+	@include breakpoint( tablet ) {
+		margin-top     : 140px;
+		padding        : 20px;
+		font-size      : 1.4rem;
+		display        : flex;
+		justify-content: space-between;
+	}
+	@include breakpoint( pc ) {
+	}
+	@include breakpoint( wide ) {
+	}
+	&__menu {
+		margin : auto auto 18px;
+		display: block;
+		@include breakpoint( tablet ) {
+			margin: auto auto auto 0;
+		}
+		&::after {
+			content: "";
+			clear  : both;
+			display: block;
+		}
+		li {
+			display    : inline-block;
+			line-height: 2;
+			@include breakpoint( tablet ) {
+			}
+			&:nth-child( odd ) {
+				@include breakpoint( tablet ) {
+					padding-left: 12px;
+					&:first-child {
+						padding-left: 0;
+					}
+				}
+				&::after {
+					content       : "";
+					width         : 1px;
+					height        : 10px;
+					margin-bottom : 2px;
+					padding-right : 14px;
+					border-right  : 1px solid #fff;
+					vertical-align: middle;
+					display       : inline-block;
+					@include breakpoint( tablet ) {
+					}
+				}
+			}
+			&:nth-child( even ) {
+				padding-left: 12px;
+				&::after {
+					@include breakpoint( tablet ) {
+						content       : "";
+						width         : 1px;
+						height        : 10px;
+						margin-bottom : 2px;
+						padding-right : 14px;
+						border-right  : 1px solid #fff;
+						vertical-align: middle;
+						display       : inline-block;
+					}
+				}
+			}
+			&:last-child {
+				@include breakpoint( tablet ) {
+					&::after {
+						border: 0;
+					}
+				}
+			}
+			a {
+				display: inline;
+				vertical-align: middle;
+			}
+		}
+	}
+}
+
+.page {
+	.l-footer {
+		margin-top: 0;
+	}
+}

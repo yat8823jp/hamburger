@@ -1,0 +1,36 @@
+.l-header {
+	width   : 100%;
+	height  : 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #eee;
+	@include breakpoint( tablet ) {
+	}
+	@include breakpoint( pc ) {
+	}
+	@include breakpoint( wide ) {
+	}
+	&__menu {
+		height          : 60px;
+		background-color: rgba( 255, 255, 255, .2 );
+		display         : flex;
+		position        : relative;
+		@include breakpoint( pc ) {
+		}
+		li {
+			display    : flex;
+			align-items: center;
+			&.l-header__menu__logo {
+				width       : 100px;
+				padding     : 0 20px 0 10px;
+				background: $color--blue;
+				justify-content: center;
+				@include breakpoint( pc ) {
+					margin-right: auto;
+					border-right: 0;
+				}
+			}
+		}
+	}
+}
