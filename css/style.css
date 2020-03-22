@@ -325,11 +325,11 @@ body {
 .p-gmenu > .list {
   -webkit-transition: all 300ms 0s ease;
   transition: all 300ms 0s ease;
-  left: 100%;
   width: 100vw;
   height: 100vh;
   padding: 70px 50px;
   position: absolute;
+  left: 0;
   top: 60px;
   background: rgba(44, 184, 216, 0.9);
   display: -webkit-box;
@@ -344,6 +344,7 @@ body {
           align-items: center;
   z-index: 100;
   overflow-y: auto;
+  left: 100%;
 }
 
 @media (min-width: 769px) {
@@ -417,7 +418,6 @@ body {
 .p-hamburger {
   width: 60px;
   height: 60px;
-  background-color: #2CB8D9;
   position: relative;
 }
 
@@ -427,58 +427,15 @@ body {
   }
 }
 
-.p-hamburger::before, .p-hamburger::after {
-  content: "";
-  width: 20px;
-  height: 1px;
-  background: #fff;
-  position: absolute;
-  left: calc( 50% - ( 20px / 2 ));
-  display: block;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
+.p-hamburger .st1,
+.p-hamburger .st2,
+.p-hamburger .st3 {
+  -webkit-transition: all 300ms 0s ease;
+  transition: all 300ms 0s ease;
 }
 
-.p-hamburger::before {
-  top: 22px;
-}
-
-.p-hamburger::after {
-  top: 38px;
-}
-
-.p-hamburger > span {
-  width: 20px;
-  height: 1px;
-  font-size: 0;
-  background: -webkit-gradient(linear, left top, right top, from(#fff), to(#fff)) repeat-x #fff;
-  background: linear-gradient(to right, #fff, #fff) repeat-x #fff;
-  background-size: auto 1px;
-  position: absolute;
-  left: calc( 50% - ( 20px / 2 ));
-  top: 50%;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
-}
-
-.p-hamburger.is-open::before {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  top: 28px;
-}
-
-.p-hamburger.is-open::after {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  top: 28px;
-}
-
-.p-hamburger.is-open > span {
-  background: none;
+.p-hamburger.is-open .st2 {
+  display: none;
 }
 
 body.is-open {

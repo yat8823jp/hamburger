@@ -5,11 +5,11 @@ body {
 	height: 60px;
 	> .list {
 		transition: all 300ms 0s ease;
+		left: 100%;
 		width         : 100vw;
 		height        : 100vh;
 		padding       : 70px 50px;
 		position      : absolute;
-		left          : 0;
 		top           : 60px;
 		background    : rgba( 44, 184, 216, .9 );
 		display       : flex;
@@ -17,8 +17,6 @@ body {
 		align-items   : center;
 		z-index       : 100;
 		overflow-y    : auto;
-
-		left: 100%;
 		@include breakpoint( pc ) {
 			width         : inherit;
 			height        : inherit;
@@ -39,7 +37,6 @@ body {
 		}
 	}
 	> .list {
-		// display: none;
 		@include breakpoint( pc ) {
 			height: 60px;
 			display: flex;
