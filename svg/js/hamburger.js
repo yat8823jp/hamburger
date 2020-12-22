@@ -1,5 +1,4 @@
 jQuery( function( $ ) {
-	let timer = 0;
 	$( ".is-hamburger" ).on( "click", function() {
 		$( this ).toggleClass( "is-open" );
 		let flg = $( this ).hasClass( "is-open" );
