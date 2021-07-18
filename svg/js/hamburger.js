@@ -1,5 +1,5 @@
 jQuery( function( $ ) {
-	$( ".is-hamburger" ).on( "click", function() {
+	$( ".js-hamburger" ).on( "click", function() {
 		$( this ).toggleClass( "is-open" );
 		let flg = $( this ).hasClass( "is-open" );
 		if( flg ) {
