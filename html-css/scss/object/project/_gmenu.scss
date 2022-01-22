@@ -17,7 +17,7 @@ body {
 		align-items   : center;
 		z-index       : 100;
 		overflow-y    : auto;
-		left: 100%;
+		left          : 100%;
 		@include breakpoint( pc ) {
 			width         : inherit;
 			height        : inherit;

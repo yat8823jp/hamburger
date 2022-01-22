@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $btnWidth: 20px;
 $btnHeight: 1px;
 
@@ -16,7 +18,7 @@ $btnHeight: 1px;
 		height    : $btnHeight;
 		background: #fff;
 		position  : absolute;
-		left      : calc( 50% - ( #{$btnWidth} / 2 ) );
+		left           : calc( 50% - math.div( #{$btnWidth}, 2 ) );
 		display   : block;
 		transition: transform 0.2s;
 	}
@@ -33,7 +35,7 @@ $btnHeight: 1px;
 		background     : linear-gradient( to right, #fff, #fff ) repeat-x #fff;
 		background-size: auto $btnHeight;
 		position       : absolute;
-		left           : calc( 50% - ( #{$btnWidth} / 2 ) );
+		left           : calc( 50% - math.div( #{$btnWidth}, 2 ) );
 		top            : 50%;
 		transition     : transform 0.2s;
 	}
