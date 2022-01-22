@@ -1,3 +1,5 @@
+@use "../../foundation/mixin";
+
 .p-mainvisual {
 	width          : 100%;
 	height         : 100%;
@@ -8,7 +10,7 @@
 	position       : absolute;
 	top            : 0;
 	z-index        : -1;
-	@include breakpoint( tablet ) {
+	@include mixin.breakpoint( tablet ) {
 		background     : url( ./images/top/mv/mv.jpg ) no-repeat;
 		background-size: cover;
 	}
@@ -30,15 +32,15 @@
 		justify-content: center;
 		align-items    : center;
 		flex-flow      : column;
-		@include breakpoint( tablet ) {
+		@include mixin.breakpoint( tablet ) {
 		}
 		dt {
 			margin-bottom: 15px;
-			@include breakpoint( tablet ) {
+			@include mixin.breakpoint( tablet ) {
 			}
 			img {
 				mix-blend-mode: color-dodge;
-				@include breakpoint( tablet ) {
+				@include mixin.breakpoint( tablet ) {
 					width: 38.91vw;
 				}
 			}
@@ -48,7 +50,7 @@
 			font-weight: bold;
 			white-space: nowrap;
 			font-size  : 1.4rem;
-			@include breakpoint( tablet ) {
+			@include mixin.breakpoint( tablet ) {
 				font-size: 1.8rem;
 			}
 		}
@@ -61,7 +63,7 @@
 		background: #333;
 		overflow  : hidden;
 		z-index   : -1;
-		@include breakpoint( tablet ) {
+		@include mixin.breakpoint( tablet ) {
 			height    : 480px;
 			margin-top: -60px;
 		}

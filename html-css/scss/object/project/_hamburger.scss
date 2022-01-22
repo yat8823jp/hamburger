@@ -1,3 +1,4 @@
+@use "../../foundation/mixin";
 @use "sass:math";
 
 $btnWidth: 20px;
@@ -8,7 +9,7 @@ $btnHeight: 1px;
 	height          : 60px;
 	background-color: #2CB8D9;
 	position        : relative;
-	@include breakpoint( pc ) {
+	@include mixin.breakpoint( pc ) {
 		display: none;
 	}
 	&::before,

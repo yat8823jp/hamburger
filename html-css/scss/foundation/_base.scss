@@ -1,3 +1,5 @@
+@use "../foundation/mixin";
+
 :root {
 	font-size: 62.5%;
 }
@@ -16,7 +18,7 @@ body {
 	font-size : 1.4rem;
 	overflow-x: hidden;
 	position  : relative;
-	@include breakpoint( tablet ) {
+	@include mixin.breakpoint( tablet ) {
 		overflow-x: inherit;
 	}
 }

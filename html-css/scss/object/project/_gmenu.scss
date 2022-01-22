@@ -1,3 +1,5 @@
+@use "../../foundation/mixin";
+
 body {
 	overflow-x: hidden;
 }
@@ -18,7 +20,7 @@ body {
 		z-index       : 100;
 		overflow-y    : auto;
 		left          : 100%;
-		@include breakpoint( pc ) {
+		@include mixin.breakpoint( pc ) {
 			width         : inherit;
 			height        : inherit;
 			padding       : inherit;
@@ -32,25 +34,25 @@ body {
 			&:last-child {
 				margin-bottom: 0;
 			}
-			@include breakpoint( pc ) {
+			@include mixin.breakpoint( pc ) {
 				margin-bottom: 0;
 			}
 		}
 	}
 	> .list {
-		@include breakpoint( pc ) {
+		@include mixin.breakpoint( pc ) {
 			height: 60px;
 			display: flex;
 			align-items: center;
 		}
 		li {
 			font-size: 1.4rem;
-			@include breakpoint( pc ) {
+			@include mixin.breakpoint( pc ) {
 				margin-right: 20px;
 				font-size   : 1.2rem;
 			}
 			a {
-				@include breakpoint( pc ) {
+				@include mixin.breakpoint( pc ) {
 					font-weight: normal;
 					white-space: nowrap;
 				}
