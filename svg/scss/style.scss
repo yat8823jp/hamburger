@@ -3,21 +3,19 @@
 // ==========================================================================
 // init
 // ==========================================================================
-@import "./mixin";
-@import "./variable";
+@forward "foundation/mixin";
+@forward "foundation/variable";
 
 // ==========================================================================
 // Foundation
 // ==========================================================================
-@import "foundation/base";
+@forward "foundation/base";
 
 // ==========================================================================
 // Layout
 // ==========================================================================
-@import "layout/header";
-@import "layout/footer";
-@import "layout/sidebar";
-@import "layout/main";
+@forward "layout/header";
+@forward "layout/footer";
 
 // ==========================================================================
 // Object
@@ -25,18 +23,18 @@
 // -----------------------------------------------------------------
 // Component
 // -----------------------------------------------------------------
-@import "object/component/button";
-@import "object/component/grid";
+@forward "object/component/button";
+@forward "object/component/grid";
 
 // -----------------------------------------------------------------
 // Project
 // -----------------------------------------------------------------
-@import "object/project/copyright";
-@import "object/project/gmenu";
-@import "object/project/hamburger";
-@import "object/project/mainvisual";
+@forward "object/project/copyright";
+@forward "object/project/gmenu";
+@forward "object/project/hamburger";
+@forward "object/project/mainvisual";
 
 // -----------------------------------------------------------------
 // Utility
 // -----------------------------------------------------------------
-@import "object/utility/display";
+@forward "object/utility/display";

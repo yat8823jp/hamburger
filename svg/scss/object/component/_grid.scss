@@ -1,12 +1,14 @@
+@use "../../foundation/mixin";
+
 .c-grid {
 	padding        : 0 17.5px;
 	display        : flex;
 	justify-content: center;
-	@include breakpoint( tablet ) {
+	@include mixin.breakpoint( tablet ) {
 		padding: 0 20px;
 	}
-	@include breakpoint( pc ) {
+	@include mixin.breakpoint( pc ) {
 	}
-	@include breakpoint( wide ) {
+	@include mixin.breakpoint( wide ) {
 	}
 }

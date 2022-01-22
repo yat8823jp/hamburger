@@ -1,25 +1,28 @@
+@use "../foundation/mixin";
+@use "../foundation/variable";
+
 .l-footer {
 	margin-top: 40px;
 	padding   : 20px 20px 15px;
-	background: $color--blue;
+	background: variable.$color--blue;
 	color     : #fff;
 	text-align: center;
 	font-size : 1.0rem;
-	@include breakpoint( tablet ) {
+	@include mixin.breakpoint( tablet ) {
 		margin-top     : 140px;
 		padding        : 20px;
 		font-size      : 1.4rem;
 		display        : flex;
 		justify-content: space-between;
 	}
-	@include breakpoint( pc ) {
+	@include mixin.breakpoint( pc ) {
 	}
-	@include breakpoint( wide ) {
+	@include mixin.breakpoint( wide ) {
 	}
 	&__menu {
 		margin : auto auto 18px;
 		display: block;
-		@include breakpoint( tablet ) {
+		@include mixin.breakpoint( tablet ) {
 			margin: auto auto auto 0;
 		}
 		&::after {
@@ -30,10 +33,10 @@
 		li {
 			display    : inline-block;
 			line-height: 2;
-			@include breakpoint( tablet ) {
+			@include mixin.breakpoint( tablet ) {
 			}
 			&:nth-child( odd ) {
-				@include breakpoint( tablet ) {
+				@include mixin.breakpoint( tablet ) {
 					padding-left: 12px;
 					&:first-child {
 						padding-left: 0;
@@ -48,14 +51,14 @@
 					border-right  : 1px solid #fff;
 					vertical-align: middle;
 					display       : inline-block;
-					@include breakpoint( tablet ) {
+					@include mixin.breakpoint( tablet ) {
 					}
 				}
 			}
 			&:nth-child( even ) {
 				padding-left: 12px;
 				&::after {
-					@include breakpoint( tablet ) {
+					@include mixin.breakpoint( tablet ) {
 						content       : "";
 						width         : 1px;
 						height        : 10px;
@@ -68,7 +71,7 @@
 				}
 			}
 			&:last-child {
-				@include breakpoint( tablet ) {
+				@include mixin.breakpoint( tablet ) {
 					&::after {
 						border: 0;
 					}

@@ -1,8 +1,10 @@
+@use "../../foundation/mixin";
+
 .p-hamburger {
 	width           : 60px;
 	height          : 60px;
 	position        : relative;
-	@include breakpoint( pc ) {
+	@include mixin.breakpoint( pc ) {
 		display: none;
 	}
 	.st1,
