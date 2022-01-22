@@ -18,7 +18,7 @@ $btnHeight: 1px;
 		height    : $btnHeight;
 		background: #fff;
 		position  : absolute;
-		left           : calc( 50% - math.div( #{$btnWidth}, 2 ) );
+		left      : calc( 50% - math.div( #{$btnWidth}, 2 ) );
 		display   : block;
 		transition: transform 0.2s;
 	}
