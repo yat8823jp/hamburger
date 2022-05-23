@@ -1,0 +1,60 @@
+@use "../../foundation/mixin";
+@use "sass:math";
+
+$btnWidth: 20px;
+$btnHeight: 1px;
+
+.p-hamburger {
+	width           : 60px;
+	height          : 60px;
+	background-color: #2CB8D9;
+	position        : relative;
+	@include mixin.breakpoint( pc ) {
+		display: none;
+	}
+	&::before,
+	&::after {
+		content   : "";
+		width     : $btnWidth;
+		height    : $btnHeight;
+		background: #fff;
+		position  : absolute;
+		left      : calc( 50% - math.div( #{$btnWidth}, 2 ) );
+		display   : block;
+		transition: transform 0.2s;
+	}
+	&::before {
+		top: 22px;
+	}
+	&::after {
+		top: 38px;
+	}
+	> span {
+		width          : $btnWidth;
+		height         : $btnHeight;
+		font-size      : 0;
+		background     : linear-gradient( to right, #fff, #fff ) repeat-x #fff;
+		background-size: auto $btnHeight;
+		position       : absolute;
+		left           : calc( 50% - math.div( #{$btnWidth}, 2 ) );
+		top            : 50%;
+		transition     : transform 0.2s;
+	}
+	&.is-open {
+		&::before {
+			transform: rotate( 45deg );
+			top      : 28px;
+		}
+		&::after {
+			transform: rotate( -45deg );
+			top      : 28px;
+		}
+		> span {
+			background: none;
+		}
+	}
+}
+
+body.is-open {
+	position: fixed;
+}

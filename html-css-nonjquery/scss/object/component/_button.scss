@@ -1,0 +1,64 @@
+@use "../../foundation/mixin";
+@use "../../foundation/variable";
+
+.c-button {
+	width        : 94,54%;
+	padding      : 20px;
+	text-align   : center;
+	color        : #fff;
+	background   : variable.$color--blue;
+	border-radius: 40px;
+	display      : block;
+	&:hover {
+		opacity: .6;
+	}
+	@include mixin.breakpoint( tablet ) {
+		min-width: 300px;
+	}
+	@include mixin.breakpoint( pc ) {
+	}
+	@include mixin.breakpoint( wide ) {
+	}
+	&--catalog {
+		min-width  : 250px;
+		width      : 66.66%;
+		min-height : 50px;
+		padding    : 20px 30px;
+		text-align : center;
+		background : #005385;
+		font-size  : 1.2rem;
+		color      : #fff;
+		position   : relative;
+		text-align : left;
+		display    : flex;
+		flex: 1;
+		align-items: center;
+		justify-content: center;
+		&::after {
+			content        : "";
+			width          : 14px;
+			height         : 14px;
+			background     : url( ./images/compontent/button/catalog/download.png ) no-repeat;
+			background-size: cover;
+			font-weight    : bold;;
+			display        : block;
+			position       : absolute;
+			right          : 15px;
+			top            : calc( 50% - 7px );
+		}
+		@include mixin.breakpoint( tablet ) {
+			min-width : 460px;
+			width     : 33.57%;
+			min-height: 100px;
+			padding   : 40px 60px;
+			font-size : 1.8rem;
+			&::after {
+				right: 30px;
+			}
+		}
+		@include mixin.breakpoint( pc ) {
+		}
+		@include mixin.breakpoint( wide ) {
+		}
+		}
+}
