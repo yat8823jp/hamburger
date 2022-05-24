@@ -1,0 +1,39 @@
+@use "../../foundation/mixin";
+
+.u-disp {
+	&--sp {
+		display: block;
+		@include mixin.breakpoint( tablet ) { display: none; }
+		@include mixin.breakpoint( pc ) { display    : none; }
+		@include mixin.breakpoint( wide ) { display  : none; }
+		@include mixin.breakpoint( full ) { display  : none; }
+	}
+	&--tablet {
+		display: none;
+		@include mixin.breakpoint( tablet ) { display: block; }
+		@include mixin.breakpoint( pc ) { display    : none; }
+		@include mixin.breakpoint( wide ) { display  : none; }
+		@include mixin.breakpoint( full ) { display  : none; }
+	}
+	&--pc {
+		display: none;
+		@include mixin.breakpoint( tablet ) { display: none; }
+		@include mixin.breakpoint( pc ) { display    : block; }
+		@include mixin.breakpoint( wide ) { display  : block; }
+		@include mixin.breakpoint( full ) { display  : block; }
+	}
+	&--wide {
+		display: none;
+		@include mixin.breakpoint( tablet ) { display: none; }
+		@include mixin.breakpoint( pc ) { display    : none; }
+		@include mixin.breakpoint( wide ) { display  : block; }
+		@include mixin.breakpoint( full ) { display  : block; }
+	}
+	&--full {
+		display: none;
+		@include mixin.breakpoint( tablet ) { display: none; }
+		@include mixin.breakpoint( pc ) { display    : none; }
+		@include mixin.breakpoint( wide ) { display  : none; }
+		@include mixin.breakpoint( full ) { display  : block; }
+	}
+}
