@@ -8,18 +8,18 @@
 	justify-content: space-between;
 	align-items: center;
 	background: #eee;
-	@include mixin.breakpoint( tablet ) {
+	@include mixin.mq( tb ) {
 	}
-	@include mixin.breakpoint( pc ) {
+	@include mixin.mq( pc ) {
 	}
-	@include mixin.breakpoint( wide ) {
+	@include mixin.mq( wide ) {
 	}
 	&__menu {
 		height          : 60px;
 		background-color: rgba( 255, 255, 255, .2 );
 		display         : flex;
 		position        : relative;
-		@include mixin.breakpoint( pc ) {
+		@include mixin.mq( pc ) {
 		}
 		li {
 			display    : flex;
@@ -29,7 +29,7 @@
 				padding     : 0 20px 0 10px;
 				background: variable.$color--blue;
 				justify-content: center;
-				@include mixin.breakpoint( pc ) {
+				@include mixin.mq( pc ) {
 					margin-right: auto;
 					border-right: 0;
 				}

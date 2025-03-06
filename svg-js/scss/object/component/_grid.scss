@@ -4,11 +4,11 @@
 	padding        : 0 17.5px;
 	display        : flex;
 	justify-content: center;
-	@include mixin.breakpoint( tablet ) {
+	@include mixin.mq( tb ) {
 		padding: 0 20px;
 	}
-	@include mixin.breakpoint( pc ) {
+	@include mixin.mq( pc ) {
 	}
-	@include mixin.breakpoint( wide ) {
+	@include mixin.mq( wide ) {
 	}
 }

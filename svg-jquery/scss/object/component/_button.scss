@@ -12,12 +12,12 @@
 	&:hover {
 		opacity: .6;
 	}
-	@include mixin.breakpoint( tablet ) {
+	@include mixin.mq( tb ) {
 		min-width: 300px;
 	}
-	@include mixin.breakpoint( pc ) {
+	@include mixin.mq( pc ) {
 	}
-	@include mixin.breakpoint( wide ) {
+	@include mixin.mq( wide ) {
 	}
 	&--catalog {
 		min-width  : 250px;
@@ -46,7 +46,7 @@
 			right          : 15px;
 			top            : calc( 50% - 7px );
 		}
-		@include mixin.breakpoint( tablet ) {
+		@include mixin.mq( tb ) {
 			min-width : 460px;
 			width     : 33.57%;
 			min-height: 100px;
@@ -56,9 +56,9 @@
 				right: 30px;
 			}
 		}
-		@include mixin.breakpoint( pc ) {
+		@include mixin.mq( pc ) {
 		}
-		@include mixin.breakpoint( wide ) {
+		@include mixin.mq( wide ) {
 		}
 	}
 }

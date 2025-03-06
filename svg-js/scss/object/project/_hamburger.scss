@@ -4,7 +4,7 @@
 	width           : 60px;
 	height          : 60px;
 	position        : relative;
-	@include mixin.breakpoint( pc ) {
+	@include mixin.mq( pc ) {
 		display: none;
 	}
 	.st1,

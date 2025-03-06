@@ -18,7 +18,7 @@ body {
 	font-size : 1.4rem;
 	overflow-x: hidden;
 	position  : relative;
-	@include mixin.breakpoint( tablet ) {
+	@include mixin.mq( tb ) {
 		overflow-x: inherit;
 	}
 }

@@ -3,37 +3,37 @@
 .u-disp {
 	&--sp {
 		display: block;
-		@include mixin.breakpoint( tablet ) { display: none; }
-		@include mixin.breakpoint( pc ) { display    : none; }
-		@include mixin.breakpoint( wide ) { display  : none; }
-		@include mixin.breakpoint( full ) { display  : none; }
+		@include mixin.mq( tb ) { display: none; }
+		@include mixin.mq( pc ) { display    : none; }
+		@include mixin.mq( wide ) { display  : none; }
+		@include mixin.mq( full ) { display  : none; }
 	}
 	&--tablet {
 		display: none;
-		@include mixin.breakpoint( tablet ) { display: block; }
-		@include mixin.breakpoint( pc ) { display    : none; }
-		@include mixin.breakpoint( wide ) { display  : none; }
-		@include mixin.breakpoint( full ) { display  : none; }
+		@include mixin.mq( tb ) { display: block; }
+		@include mixin.mq( pc ) { display    : none; }
+		@include mixin.mq( wide ) { display  : none; }
+		@include mixin.mq( full ) { display  : none; }
 	}
 	&--pc {
 		display: none;
-		@include mixin.breakpoint( tablet ) { display: none; }
-		@include mixin.breakpoint( pc ) { display    : block; }
-		@include mixin.breakpoint( wide ) { display  : block; }
-		@include mixin.breakpoint( full ) { display  : block; }
+		@include mixin.mq( tb ) { display: none; }
+		@include mixin.mq( pc ) { display    : block; }
+		@include mixin.mq( wide ) { display  : block; }
+		@include mixin.mq( full ) { display  : block; }
 	}
 	&--wide {
 		display: none;
-		@include mixin.breakpoint( tablet ) { display: none; }
-		@include mixin.breakpoint( pc ) { display    : none; }
-		@include mixin.breakpoint( wide ) { display  : block; }
-		@include mixin.breakpoint( full ) { display  : block; }
+		@include mixin.mq( tb ) { display: none; }
+		@include mixin.mq( pc ) { display    : none; }
+		@include mixin.mq( wide ) { display  : block; }
+		@include mixin.mq( full ) { display  : block; }
 	}
 	&--full {
 		display: none;
-		@include mixin.breakpoint( tablet ) { display: none; }
-		@include mixin.breakpoint( pc ) { display    : none; }
-		@include mixin.breakpoint( wide ) { display  : none; }
-		@include mixin.breakpoint( full ) { display  : block; }
+		@include mixin.mq( tb ) { display: none; }
+		@include mixin.mq( pc ) { display    : none; }
+		@include mixin.mq( wide ) { display  : none; }
+		@include mixin.mq( full ) { display  : block; }
 	}
 }

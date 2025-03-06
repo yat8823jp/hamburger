@@ -9,7 +9,7 @@ $btnHeight: 1px;
 	height          : 60px;
 	background-color: #2CB8D9;
 	position        : relative;
-	@include mixin.breakpoint( pc ) {
+	@include mixin.mq( pc ) {
 		display: none;
 	}
 	&::before,

@@ -10,7 +10,7 @@
 	position       : absolute;
 	top            : 0;
 	z-index        : -1;
-	@include mixin.breakpoint( tablet ) {
+	@include mixin.mq( tb ) {
 		background     : url( ./images/top/mv/mv.jpg ) no-repeat;
 		background-size: cover;
 	}
@@ -32,15 +32,15 @@
 		justify-content: center;
 		align-items    : center;
 		flex-flow      : column;
-		@include mixin.breakpoint( tablet ) {
+		@include mixin.mq( tb ) {
 		}
 		dt {
 			margin-bottom: 15px;
-			@include mixin.breakpoint( tablet ) {
+			@include mixin.mq( tb ) {
 			}
 			img {
 				mix-blend-mode: color-dodge;
-				@include mixin.breakpoint( tablet ) {
+				@include mixin.mq( tb ) {
 					width: 38.91vw;
 				}
 			}
@@ -50,7 +50,7 @@
 			font-weight: bold;
 			white-space: nowrap;
 			font-size  : 1.4rem;
-			@include mixin.breakpoint( tablet ) {
+			@include mixin.mq( tb ) {
 				font-size: 1.8rem;
 			}
 		}
@@ -63,7 +63,7 @@
 		background: #333;
 		overflow  : hidden;
 		z-index   : -1;
-		@include mixin.breakpoint( tablet ) {
+		@include mixin.mq( tb ) {
 			height    : 480px;
 			margin-top: -60px;
 		}

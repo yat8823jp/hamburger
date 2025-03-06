@@ -8,21 +8,21 @@
 	color     : #fff;
 	text-align: center;
 	font-size : 1.0rem;
-	@include mixin.breakpoint( tablet ) {
+	@include mixin.mq( tb ) {
 		margin-top     : 140px;
 		padding        : 20px;
 		font-size      : 1.4rem;
 		display        : flex;
 		justify-content: space-between;
 	}
-	@include mixin.breakpoint( pc ) {
+	@include mixin.mq( pc ) {
 	}
-	@include mixin.breakpoint( wide ) {
+	@include mixin.mq( wide ) {
 	}
 	&__menu {
 		margin : auto auto 18px;
 		display: block;
-		@include mixin.breakpoint( tablet ) {
+		@include mixin.mq( tb ) {
 			margin: auto auto auto 0;
 		}
 		&::after {
@@ -33,10 +33,10 @@
 		li {
 			display    : inline-block;
 			line-height: 2;
-			@include mixin.breakpoint( tablet ) {
+			@include mixin.mq( tb ) {
 			}
 			&:nth-child( odd ) {
-				@include mixin.breakpoint( tablet ) {
+				@include mixin.mq( tb ) {
 					padding-left: 12px;
 					&:first-child {
 						padding-left: 0;
@@ -51,14 +51,14 @@
 					border-right  : 1px solid #fff;
 					vertical-align: middle;
 					display       : inline-block;
-					@include mixin.breakpoint( tablet ) {
+					@include mixin.mq( tb ) {
 					}
 				}
 			}
 			&:nth-child( even ) {
 				padding-left: 12px;
 				&::after {
-					@include mixin.breakpoint( tablet ) {
+					@include mixin.mq( tb ) {
 						content       : "";
 						width         : 1px;
 						height        : 10px;
@@ -71,7 +71,7 @@
 				}
 			}
 			&:last-child {
-				@include mixin.breakpoint( tablet ) {
+				@include mixin.mq( tb ) {
 					&::after {
 						border: 0;
 					}
